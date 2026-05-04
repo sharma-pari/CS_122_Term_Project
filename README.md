@@ -4,7 +4,7 @@
 - **Authors:** Pari Sharma and Shannon Lo
 
 - **Project Description:**
-For hikers, it may be hard to find up to date status of the availability of hiking trails. For this, we will scrape data from nps.gov and fs.usda.gov to get information on trail availability. We will also get information on alert types for state and local parks. This includes danger zones, closure status, and hazard alerts for different locations. Our project will display this data on a UI that is easy to navigate and allows for quick results. 
+A natural disaster dashboard using data from the National Weather Service, National Park Service, and other federally funded government websites. By scraping this data from the websites, we'll be able to create a dashboard where different natural disasters can be reviewed and warnings will be submitted based on region and disaster type.
 
 - **Project Outline/Plan:**
   - _**Interface Plan**_
@@ -16,4 +16,6 @@ For hikers, it may be hard to find up to date status of the availability of hiki
   - _**Data Analysis and Visualization Plan**_
     - The analysis component will use Python's `pandas` library to calculate campsite occupancy rates and trail closure frequencies across all scraped parks, identifying patterns in availability by region, season, and park type. Using `numpy`, the program will compute summary statistics such as average availability per park and percentage of trails marked as closed or hazardous at any given time. The visualization component will produce a bar chart comparing campsite availability across parks using `seaborn`, giving users a clear side-by-side view of which locations are most and least accessible. A second plot will display a heatmap or time series showing how trail conditions change over time, allowing users to spot seasonal trends or recurring closures at specific parks. Both visualizations will be embedded directly in the program interface, updating dynamically based on the user's selected filters such as park name, region, or status type.
 
-    
+### Resources
+- https://eonet.gsfc.nasa.gov/docs/v3 
+- https://eonet.gsfc.nasa.gov/how-to-guide
