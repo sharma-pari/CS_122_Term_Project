@@ -4,7 +4,7 @@
 - **Authors:** Pari Sharma and Shannon Lo
 
 - **Project Description:**
-For hikers, we want to make it easier to track natural disaster events across all regions. For this, we will fetch, analyze, and visualize NASA's Earth Observatory Natural Event Tracker (EONET) data.  This includes danger zones, closure status, and hazard alerts for different locations. Our project will display this data on a UI that is easy to navigate and allows for quick results. 
+A natural disaster dashboard using data from the National Weather Service, National Park Service, and other federally funded government websites. By scraping this data from the websites, we'll be able to create a dashboard where different natural disasters can be reviewed and warnings will be submitted based on region and disaster type.
 
 - **Project Outline/Plan:**
   - _**Interface Plan**_
@@ -16,36 +16,6 @@ For hikers, we want to make it easier to track natural disaster events across al
   - _**Data Analysis and Visualization Plan**_
     - The analysis component will use Python's `pandas` library to calculate campsite occupancy rates and trail closure frequencies across all scraped parks, identifying patterns in availability by region, season, and park type. Using `numpy`, the program will compute summary statistics such as average availability per park and percentage of trails marked as closed or hazardous at any given time. The visualization component will produce a bar chart comparing campsite availability across parks using `seaborn`, giving users a clear side-by-side view of which locations are most and least accessible. A second plot will display a heatmap or time series showing how trail conditions change over time, allowing users to spot seasonal trends or recurring closures at specific parks. Both visualizations will be embedded directly in the program interface, updating dynamically based on the user's selected filters such as park name, region, or status type.
 
-  
- 
-## Setup
- 
-```bash
-pip install -r requirements.txt
-python app.py
-```
- 
-Then open http://localhost:5000
- 
-## Features
- 
-### Interface (GUI)
-- **Home screen** with live world map showing event locations
-- **Event detail modal** (pop-up window) --> click any map marker
-- **4+ widgets**: Category dropdown, Status dropdown, Days slider, Fetch button
-### Data Analysis (scipy/numpy)
-- Linear regression trend (slope, R²) using `scipy.stats.linregress`
-- Mean and standard deviation of monthly event frequency via `numpy`
-- Geographic region clustering (Arctic / Temperate / Tropical)
-### Visualization (Plotly)
-- Interactive globe/map with color-coded event categories
-- Monthly frequency bar chart with trend line overlay
-- Category distribution donut chart
-## File Structure
-```
-app.py          — Flask backend + analysis logic
-templates/
-  index.html    — Single-page frontend (Plotly.js)
-requirements.txt
-```
- 
+### Resources
+- https://eonet.gsfc.nasa.gov/docs/v3 
+- https://eonet.gsfc.nasa.gov/how-to-guide
