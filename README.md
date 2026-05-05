@@ -21,7 +21,7 @@ A natural disaster dashboard using data from the National Weather Service, Natio
  
 ### Interface (GUI)
 - **Home screen** with live world map showing event locations
-- **Event detail modal** (pop-up window) — click any map marker to view full event details, hover to preview event type, location, and date
+- **Event detail modal** (pop-up window): Click any map marker to view full event details, hover to preview event type, location, and date
 - **4+ widgets**: Category dropdown, Status dropdown, Days slider, Fetch button
 ### Data Analysis (scipy/numpy)
 - Linear regression trend (slope, R²) using `scipy.stats.linregress`
