@@ -29,5 +29,25 @@ def index():
     categories = fetch_categories() # categories: One or more categories assigned to the event.
     return render_template("eonet_index.html", categories=categories)
 
+@app.route("/api/events")
+def api_events():
+    # Format events for map
+    mapped = []
+    for e in events:
+        geo = e.get("geometry", [])
+        if geo:
+            c = geo[-1].get("coordinates", [])
+            if c and isinstance(c[0], (int, float)):
+                mapped.append({
+                    "id": e["id"],
+                    "title": e["title"],
+                    "categories": [cat["title"] for cat in e.get("categories", [])],
+                    "lon": c[0], "lat": c[1],
+                    "date": geo[-1].get("date", "")[:10],
+                    "closed": e.get("closed")
+                })
+    
+    return jsonify({"events": mapped, "analysis": analysis, "total_raw": len(events)})
+
 if __name__ == "__main__":
     app.run(port=5000)
