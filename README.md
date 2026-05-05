@@ -1,5 +1,5 @@
 # CS_122_Term_Project
-- **Project Title:** The Hikers Guide to the Galaxy
+- **Project Title:** EONET // Natural Disaster Monitor
 
 - **Authors:** Pari Sharma and Shannon Lo
 
