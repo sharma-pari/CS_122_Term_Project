@@ -31,8 +31,6 @@ def index():
 
 @app.route("/api/events")
 def api_events():
-
-    
     # Format events for map
     mapped = []
     for e in events:
